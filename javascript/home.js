@@ -6,6 +6,14 @@ function homeData() {
 
     document.getElementById('user-name').innerHTML = userName
     document.getElementById('balance').innerHTML = user.balance
+
+    const logoutBtn = document.getElementById('logout')
+    logoutBtn.addEventListener('click', () => logout())
 }
 
 homeData()
+
+function logout() {
+    localStorage.clear()
+    window.location.href = "index.html"
+}

@@ -4,16 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kmbank-bankInfo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    <a href="index.html">Back</a><br>
-    <h1>BANK INFO</h1>
+    <h1 class="text-center text-white p-2 bg-dark bg-gradient">BANK INFORMATION</h1>
+    <a href="index.html" class="btn btn-danger">Back</a><br>
 
-    <button id="users">Users</button>
-    <button id="basicTransaction">Basic transactions</button>
-    <button id="transferTransaction">Transfer transactions</button>
+    <button id="usersBtn" class="btn btn-primary">Users</button>
+    <button id="basicTransaction" class="btn btn-secondary">Basic transactions</button>
+    <button id="transferTransaction" class="btn btn-warning">Transfer transactions</button>
 
     <div id="tab"></div>
+    <div id="tableTransferTransactions" class="container mt-5" style="display: none;">
+        <table class="table table-responsive table-bordered border-dark table-hover text-center">
+            <thead>
+                <tr>
+                    <th>Transaction Id</th>
+                    <th>Sender Id</th>
+                    <th>Recipient Id</th>
+                    <th>Balance</th>
+                </tr>
+            </tHead>
+            <tbody id="transferTransactions"></tbody>
+            
+        </table>
+    </div>
+
+    <div id="tableBasicTransactions" class="container mt-5" style="display: none;">
+        <table class="table table-responsive table-bordered border-dark table-hover text-center">
+            <thead>
+                <tr>
+                    <th>Transaction Id</th>
+                    <th>User Id</th>
+                    <th>Transaction type</th>
+                    <th>Balance</th>
+                </tr>
+            </tHead>
+            <tbody id="basicTransactions"></tbody>
+            
+        </table>
+    </div>
+
+    <div id="tableUsers" class="container mt-5" style="display: none;">
+        <table class="table table-responsive table-bordered border-dark table-hover text-center">
+            <thead>
+                <tr>
+                    <th>User Id</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Age</th>
+                    <th>Email address</th>
+                    <th>Account number</th>
+                    <th>Balance</th>
+                </tr>
+            </tHead>
+            <tbody id="users"></tbody>
+            
+        </table>
+    </div>
     <script src="javascript/bankInfo.js"></script>
 </body>
 </html>

@@ -10,38 +10,41 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
         crossorigin="anonymous"
     >
+    <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
     <a href="index.html" class="btn btn-danger">Back</a><br>
     <h1>REGISTER</h1>
-    <form>
-        <div class="mb-3 form-floating">
-            <input type="text" id="fname" class="form-control" placeholder="first name">
-            <label for="fname" class="form-label">First name</label>
-        </div>
-        <div class="mb-3 form-floating">
-            <input type="text" id="lname" class="form-control" placeholder="last name">
-            <label for="lname" class="form-label">Last name:</label>
+    <form class="border p-3 m-2">
+        <div class="row g-4">
+            <div class="col mb-3 form-floating">
+                <input type="text" id="fname" class="form-control" placeholder="first name">
+                <label for="fname" class="form-label px-4">First name</label>
+            </div>
+            <div class="col mb-3 form-floating">
+                <input type="text" id="lname" class="form-control" placeholder="last name">
+                <label for="lname" class="form-label px-4">Last name</label>
+            </div>
         </div>
         <div class="mb-3 form-floating">
             <input type="date" id="dob" class="form-control" placeholder="00-00-0000">
-            <label for="dob" class="form-label">Date of birth:</label>
+            <label for="dob" class="form-label">Date of birth</label>
         </div>
         <div class="mb-3 form-floating">
             <input type="text" id="email" class="form-control" placeholder="email address">
-            <label for="email" class="form-label">Email address:</label>
+            <label for="email" class="form-label">Email address</label>
         </div>
         <div class="mb-3 form-floating">
             <input type="text" id="acc" class="form-control" placeholder="000000000">
-            <label for="acc" class="form-label">Account number:</label>
+            <label for="acc" class="form-label">Account number</label>
         </div>
         <div class="mb-3 form-floating">
-            <input type="text" id="pass" class="form-control" placeholder="password">
-            <label for="pass" class="form-label">Password:</label>
+            <input type="password" id="pass" class="form-control" placeholder="password">
+            <label for="pass" class="form-label">Password</label>
         </div>
         <div class="mb-3 form-floating">
-            <input type="text" id="cpass" class="form-control" placeholder="confirm password">
-            <label for="cpass" class="form-label">Confirm password:</label>
+            <input type="password" id="cpass" class="form-control" placeholder="confirm password">
+            <label for="cpass" class="form-label">Confirm password</label>
         </div>
         <button id="btn" class="btn-lg btn-info">Register</button>
     </form>

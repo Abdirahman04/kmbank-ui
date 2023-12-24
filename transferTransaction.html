@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kmbank-transferTransaction</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    <a href="home.html">Back</a><br>
-    <h1>TRANSFER TRANSACTIONS</h1>
-    <div id="tab"></div>
+    <h1 class="text-center text-white p-2 bg-dark bg-gradient">TRANSFER TRANSACTIONS</h1>
+    <a href="home.html" class="btn btn-danger">Back</a><br>
+    
+    <div class="container mt-5">
+        <table class="table table-responsive table-bordered border-dark table-hover text-center">
+            <thead>
+                <tr>
+                    <th>Transaction Id</th>
+                    <th>Transaction type</th>
+                    <th>Target Id</th>
+                    <th>Balance</th>
+                </tr>
+            </tHead>
+            <tbody id="tab"></tbody>
+            
+        </table>
+    </div>
     <script src="javascript/transferTransaction.js"></script>
 </body>
 </html>

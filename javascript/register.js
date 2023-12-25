@@ -6,15 +6,22 @@ function register() {
     const url = "http://localhost:8080/api/v1/user"
 
     btn.addEventListener('click', (event) => {
+        let acc = document.getElementById('acc').value
+        let fname = document.getElementById('fname').value
+        let lname = document.getElementById('lname').value
+        let dob = document.getElementById('dob').value
+        let email = document.getElementById('email').value
+        let pass = document.getElementById('pass').value
+
         if (form.checkValidity()) {
             event.preventDefault()
             const bdd = {
-                accountNumber: document.getElementById('acc').value,
-                firstName: document.getElementById('fname').value,
-                lastName: document.getElementById('lname').value,
-                dob: document.getElementById('dob').value,
-                email: document.getElementById('email').value,
-                password: document.getElementById('pass').value
+                accountNumber: acc,
+                firstName: fname,
+                lastName: lname,
+                dob: dob,
+                email: email,
+                password: pass
             }
     
             const options = {

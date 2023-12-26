@@ -27,31 +27,38 @@
             <div class="col mb-3 form-floating">
                 <input type="text" id="fname" class="form-control" placeholder="first name" required>
                 <label for="fname" class="form-label px-4">First name</label>
+                <p class="text-danger" id="error-message-fname"></p>
             </div>
             <div class="col mb-3 form-floating">
                 <input type="text" id="lname" class="form-control" placeholder="last name" required>
                 <label for="lname" class="form-label px-4">Last name</label>
+                <p class="text-danger" id="error-message-lname"></p>
             </div>
         </div>
         <div class="mb-3 form-floating">
             <input type="date" id="dob" class="form-control" placeholder="00-00-0000" required>
             <label for="dob" class="form-label">Date of birth</label>
+            <p class="text-danger" id="error-message-dob"></p>
         </div>
         <div class="mb-3 form-floating">
             <input type="text" id="email" class="form-control" placeholder="email address" required>
             <label for="email" class="form-label">Email address</label>
+            <p class="text-danger" id="error-message-email"></p>
         </div>
         <div class="mb-3 form-floating">
             <input type="text" id="acc" class="form-control" placeholder="000000000" required>
             <label for="acc" class="form-label">Account number</label>
+            <p class="text-danger" id="error-message-acc"></p>
         </div>
         <div class="mb-3 form-floating">
             <input type="password" id="pass" class="form-control" placeholder="password" required>
             <label for="pass" class="form-label">Password</label>
+            <p class="text-danger" id="error-message-pass"></p>
         </div>
         <div class="mb-3 form-floating">
             <input type="password" id="cpass" class="form-control" placeholder="confirm password" required>
             <label for="cpass" class="form-label">Confirm password</label>
+            <p class="text-danger" id="error-message-cpass"></p>
         </div>
         <button id="btn" class="btn-lg btn-info">Register</button>
     </form>

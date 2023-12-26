@@ -53,36 +53,15 @@ function bankInfo() {
 
 function displayData(data, tab) {
     data.forEach(element => {
-        const tr = document.createElement('tr')
-        tr.classList.add('table-secondary')
+        const tr = createTableRow(['table-secondary', 'transfer-transaction-row']);
 
-        const tdId = document.createElement('td')
-        tdId.innerHTML = element.id
-        tr.appendChild(tdId)
-
-        const tdFname = document.createElement('td')
-        tdFname.innerHTML = element.firstName
-        tr.appendChild(tdFname)
-
-        const tdLname = document.createElement('td')
-        tdLname.innerHTML = element.lastName
-        tr.appendChild(tdLname)
-
-        const tdAge = document.createElement('td')
-        tdAge.innerHTML = element.age
-        tr.appendChild(tdAge)
-
-        const tdEmail = document.createElement('td')
-        tdEmail.innerHTML = element.email
-        tr.appendChild(tdEmail)
-
-        const tdAcc = document.createElement('td')
-        tdAcc.innerHTML = element.accountNumber
-        tr.appendChild(tdAcc)
-
-        const tdBalance = document.createElement('td')
-        tdBalance.innerHTML = element.balance
-        tr.appendChild(tdBalance)
+        appendTableCell(tr, element.id);
+        appendTableCell(tr, element.firstName);
+        appendTableCell(tr, element.lastName);
+        appendTableCell(tr, element.age);
+        appendTableCell(tr, element.email);
+        appendTableCell(tr, element.accountNumber);
+        appendTableCell(tr, element.balance);
 
         tab.appendChild(tr)
     })
@@ -90,24 +69,12 @@ function displayData(data, tab) {
 
 function displayDataTransferTransactions(data, transferBody) {
     data.forEach(element => {
-        const tr = document.createElement('tr')
-        tr.classList.add('table-secondary')
+        const tr = createTableRow(['table-secondary', 'transfer-transaction-row']);
 
-        const tdId = document.createElement('td')
-        tdId.innerHTML = element.id
-        tr.appendChild(tdId)
-
-        const tdSenderId = document.createElement('td')
-        tdSenderId.innerHTML = element.senderId
-        tr.appendChild(tdSenderId)
-
-        const tdRecipientId = document.createElement('td')
-        tdRecipientId.innerHTML = element.recipientId
-        tr.appendChild(tdRecipientId)
-
-        const tdBalance = document.createElement('td')
-        tdBalance.innerHTML = element.balance
-        tr.appendChild(tdBalance)
+        appendTableCell(tr, element.id);
+        appendTableCell(tr, element.senderId);
+        appendTableCell(tr, element.recipientId);
+        appendTableCell(tr, element.balance);
 
         transferBody.appendChild(tr)
     })
@@ -115,27 +82,29 @@ function displayDataTransferTransactions(data, transferBody) {
 
 function displayDataBasicTransactions(data, basicBody) {
     data.forEach(element => {
-        const tr = document.createElement('tr')
-        tr.classList.add('table-secondary')
+        const tr = createTableRow(['table-secondary', 'basic-transaction-row']);
 
-        const tdId = document.createElement('td')
-        tdId.innerHTML = element.id
-        tr.appendChild(tdId)
+        appendTableCell(tr, element.id);
+        appendTableCell(tr, element.userId);
+        appendTableCell(tr, element.transactionType);
+        appendTableCell(tr, element.balance);
 
-        const tdUserId = document.createElement('td')
-        tdUserId.innerHTML = element.userId
-        tr.appendChild(tdUserId)
-
-        const tdTransactionType = document.createElement('td')
-        tdTransactionType.innerHTML = element.transactionType
-        tr.appendChild(tdTransactionType)
-
-        const tdBalance = document.createElement('td')
-        tdBalance.innerHTML = element.balance
-        tr.appendChild(tdBalance)
-
-        basicBody.appendChild(tr)
+        basicBody.appendChild(tr);
     });
-} 
+}
+
+function createTableRow(classes) {
+    const tr = document.createElement('tr');
+    if (classes) {
+        tr.classList.add(...classes);
+    }
+    return tr;
+}
+
+function appendTableCell(row, content) {
+    const td = document.createElement('td');
+    td.innerHTML = content;
+    row.appendChild(td);
+}
 
 bankInfo()

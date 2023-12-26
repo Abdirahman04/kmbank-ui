@@ -18,7 +18,7 @@ function profileData() {
     getUserData(user.accountNumber).then(data => {
         innerValue('fname-form', data.firstName)
         innerValue('lname-form', data.lastName)
-        innerValue('dob-form', data.dob)
+        innerValue('dob-form', new Date(data.dob).toISOString().split('T')[0])
         innerValue('email-form', data.email)
         innerValue('pass-form', data.password)
         innerValue('acc-form', data.accountNumber)
